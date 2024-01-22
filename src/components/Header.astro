@@ -1,0 +1,40 @@
+---
+import LogoIcon from "./Icons/LogoIcon.astro";
+
+interface Props {
+  logo?: string;
+}
+
+const { logo } = Astro.props;
+---
+<header class="flex justify-center items-center w-auto h-auto py-8 ">
+    <div class="flex flex-col sm:flex-row justify-around items-center w-full h-auto ">
+        {logo &&<LogoIcon class="w-[80px] h-24"/>}
+        <nav>
+            <ul class="gap-12 flex justify-center">
+                <li>
+                    <a href="#start">Inicio</a>
+                </li>
+                <li>
+                    <a href="#about-me">
+                        Sobre Mi
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience">Experiencia</a>
+                </li>
+                <li>Proyectos</li>
+                <li>Contactame</li>
+            </ul>
+        </nav>
+    </div>
+    
+</header>
+
+<style>
+    /* header {
+        display: flex;
+        flex-direction: row;
+    } */
+</style>
+

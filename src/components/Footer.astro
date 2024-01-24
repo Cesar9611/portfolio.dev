@@ -7,16 +7,21 @@ const getYear = () => {
 const YEAR = getYear();
 ---
 
-<footer
-  class="w-full mx-auto"
->
+<footer class="w-full mx-auto">
   <div
     class="flex items-center justify-between py-6 w-full mx-auto max-w-screen-xl px-4 gap-x-4"
   >
-    <span
-      class="text-sm text-center text-blue-600/80  w-[150px] py-1 px-2"
+    <span class="text-sm text-center text-blue-600/80 w-[150px] py-1 px-2"
       >© {YEAR}
     </span>
     <Header />
   </div>
 </footer>
+
+<style>
+  @media (max-width: 600px) {
+    footer div {
+      flex-direction: column-reverse;
+    }
+  }
+</style>
